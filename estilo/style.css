@@ -1,0 +1,82 @@
+@keyframes cambiarColorBody {
+    0%{background-color: rgb(1, 16, 20);}
+   50% {background-color: rgb(32, 32, 32);}
+   100%{background-color: rgb(12, 12, 12);}
+    }
+body{
+    color:green;
+   
+   font-family: 'Press Start 2P';
+   animation-name: cambiarColorBody;
+   animation-duration:15s ;
+
+animation-iteration-count: infinite;
+}
+header{
+    background-color: black;
+    display: inline-flex;
+     box-shadow:
+       inset 0rem 0em 1rem rgba(22, 203, 19, 0.815),
+       inset 0rem 0em 10rem rgba(22, 203, 19, 0.815);
+       transition: 1500ms;
+
+}
+header:hover{
+    background-color: blanchedalmond;
+}
+ img{
+    border-radius:100%;
+ margin: 2rem;
+   display:inline-block;
+   border-color: green;
+   border-width: 2.5rem;
+   opacity: 0.6;
+   
+ 
+}
+
+h1{
+    font-size: 3rem;
+    text-align: right;
+    padding: 2rem;
+    text-shadow: 1rem white;
+}
+
+
+main{
+    margin-top: 2rem ;
+    animation-name: cambiarColorMain;
+    animation-duration:50s ;
+
+animation-iteration-count: infinite;
+}
+
+input{
+    display: block;
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    font-family: 'Press Start 2P';
+    background-color: chartreuse;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+#botonera{
+    margin-top: 2.5rem;
+}
+button{
+    width: 25%;
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    width:45%;
+    height: 5rem;
+    margin: auto;
+    font-family: 'Press Start 2P';
+      background-color: chartreuse;
+    border-radius: 2.5rem;
+    transition: 500ms;
+}
+button:hover{
+    background-color: rgb(46, 74, 18);
+}
