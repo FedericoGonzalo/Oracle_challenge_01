@@ -1,11 +1,12 @@
 function encriptador() {
 
     // var mensaje=prompt("Escriba su mensaje, solo letras minusculas sin numeros ni caracteres");
-    var mensaje = document.querySelector("input").value;
+
     // alert("su mensaje a encriptar es: "+mensaje );
     //alert("Largo de mensaje "+mensaje.length );
-
-
+    var mensaje = document.querySelector("input").value;
+   
+    var respuestaEncrp = "";
     for (var i = 0; i < mensaje.length; i++) {
         if (mensaje.charAt(i) == "a") {
             //    alert("A "+ mensaje.charAt(i) );
@@ -32,17 +33,17 @@ function encriptador() {
 
     }
 
-    alert(respuestaEncrp);
 
-
+    mensaje = document.querySelector("input").value = respuestaEncrp;
+ //   alert(respuestaEncrp);
 }
 function decencriptador() {
 
     var mensaje = document.querySelector("input").value;
-    alert("su mensaje a encriptar es: " + mensaje);
-    alert("Largo de mensaje " + mensaje.length);
+    //  alert("su mensaje a encriptar es: " + mensaje);
+    // alert("Largo de mensaje " + mensaje.length);
 
-
+    var respuestaDecencrp = "";
     for (var i = 0; i < mensaje.length; i++) {
         if (mensaje.charAt(i) == "a") {
             //  alert("A "+ mensaje.charAt(i) );
@@ -73,17 +74,23 @@ function decencriptador() {
 
 
     }
-
-    alert(respuestaDecencrp)
+    mensaje = document.querySelector("input").value =respuestaDecencrp;
+  //  alert(respuestaDecencrp)
 
 
 
 }
 
+function copyF(){
+    var mensaje = document.querySelector("input");
+    mensaje.select();
+    document.execCommand("copy");
+}
 
-var respuestaEncrp = "";
-var respuestaDecencrp = "";
+
 var encriptar = document.getElementById("botonEncriptar");
 encriptar.onclick = encriptador;
 var decencriptar = document.getElementById("botonDesencriptar");
 decencriptar.onclick = decencriptador;
+var copiar = document.getElementById("botonCopiar");
+copiar.onclick =copyF;
